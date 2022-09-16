@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+ 
+.header {
+  height: 70px;
+  background: #333;
+  color: #fff;
+  display:flex;
+  padding: 0 60px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}  
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.product-list {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 20px;
+}
+
+.product-card {
+  width: 250px;
+  border: 1px solid #ccc;
+  padding:20px;
+}
+
+.product-list a {
+  color: #000;
+  text-decoration: none;
+}
+
+.card-img {
+  height: 300px;
+
+}
+
+.card-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 60px;
+}
+
+.left-img {
+  display: flex;
+  align-items: center;
+}
+
+.left-img img {
+  width: 100%;
+
+}
+
+.right-desc {
+  padding: 30px 60px;
+  border: 1px solid #eee;
+}
+
+.product-price {
+  padding: 10px 25px;
+  background: rgb(1, 131, 131);
   color: white;
+  display: inline-block;
+  position: relative;
+  left: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right:10px solid rgb(1, 131, 131);
+  position: absolute;
+  left: -15px;
+  transform: scale(2)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-category {
+  background-color: #eee;
+  color: brown;
+  padding: 10px 30px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-to-cart {
+  background-color: rgb(193, 19, 65);
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
 }
